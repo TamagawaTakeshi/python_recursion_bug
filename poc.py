@@ -58,8 +58,6 @@ def graph_to_isi_json(graph: Graph) -> dict:
 
 if __name__ == "__main__":
     sys.setrecursionlimit(17185)
-    # main()
-    # graph = read_graph("/home/myc/pythontest/something.graph")
     graph = read_graph("./something.graph")
     isi_json = graph_to_isi_json(graph)
     isi_string = json.dumps(isi_json, default=chunk_encoder)
